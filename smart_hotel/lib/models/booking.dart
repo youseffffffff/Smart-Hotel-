@@ -1,4 +1,4 @@
-// Booking status enum
+// Booking status enum //3
 enum BookingStatus { active, expired, cancelled }
 
 // Booking model representing a hotel reservation
@@ -39,8 +39,7 @@ class Booking {
 
   // Check if QR is still valid
   bool get isQrValid =>
-      status == BookingStatus.active &&
-      DateTime.now().isBefore(qrExpiresAt);
+      status == BookingStatus.active && DateTime.now().isBefore(qrExpiresAt);
 
   // Get remaining seconds until QR expiry
   int get secondsUntilExpiry {
